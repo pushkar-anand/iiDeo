@@ -13,7 +13,7 @@ const linksArray = [
 ];
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
 	const data = {
 		title: "iiDeo",
 		name: "iiDeo",
@@ -21,6 +21,16 @@ router.get('/', function (req, res, next) {
 		links: linksArray
 	};
 	res.render('index', data);
+});
+
+router.get('/about', (req, res, next) => {
+	const data = {};
+	res.render('about', data);
+});
+
+router.get('/privacy', (req, res, next) => {
+	const data = {};
+	res.render('privacy', data);
 });
 
 module.exports = router;
