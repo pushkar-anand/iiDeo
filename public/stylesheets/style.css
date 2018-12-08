@@ -1,8 +1,35 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+#preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#more-btn {
+    border: 1px solid blue;
+}
+
+#fab {
+    border-radius: 30px;
+}
+
+.link {
+    padding: 5px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+#iiDeo {
+
 }

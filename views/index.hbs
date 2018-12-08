@@ -1,2 +1,141 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!--suppress HtmlUnknownTarget -->
+<div id="preloader">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="purple darken-4 lighten-1" role="navigation">
+    <div class="nav-wrapper">
+        <a href="/" id="iiDeo" class="brand-logo">iiDeo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            {{#each links}}
+                <li><a href="{{link}}">{{title}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+    {{#each links}}
+        <li><a href="{{link}}">{{title}}</a></li>
+    {{/each}}
+</ul>
+
+<div id="content" style="display: none;">
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">{{name}}</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">{{tagline}}</h5>
+            </div>
+            <div class="row center hide-on-med-and-down">
+                <div class="col s12">
+                    <a class=" btn-large purple darken-4 pulse" id="fab">
+                        Start Call <i class="large material-icons right">duo</i>
+                    </a>
+                </div>
+            </div>
+            <div class="row center">
+                <div class="col s12">
+                    <a href="" id="more-btn" class="btn-large waves-effect waves-light btn white black-text hoverable">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="fixed-action-btn hide-on-med-and-up">
+        <a class=" btn-large purple darken-4 pulse" id="fab">
+            Start Call <i class="large material-icons right">video_call</i>
+        </a>
+    </div>
+
+    <footer class="page-footer blue-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About us</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like
+                        it's
+                        our full time job. Any amount would help support and continue development on this project and is
+                        greatly appreciated.</p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li class="left link"><a class="white-text" href="/about">About </a></li>
+                        <li class="left link"><a class="white-text" href="/privacy">Privacy </a></li>
+                        <li class="left link"><a class="white-text" href="/settings">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="https://pushkaranand.me">Pushkar Anand</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--suppress JSUnresolvedFunction -->
+<script>
+    $(document).ready(() => {
+        $("#preloader").hide();
+        $("#content").show();
+        $(".fixed-action-btn").floatingActionButton();
+        $(".sidenav").sidenav();
+    });
+</script>
